@@ -3,7 +3,7 @@
 
 1월 17일 수정사항
 
-getFirePowerAclNew 화면 출력 오류 (수정항목)
+<U>getFirePowerAclNew 화면 출력 오류 (수정항목)<U>
 
 *해당내용은 다른 개발자가 제작한 코드를 수정한 내용입니다
 
