@@ -4,7 +4,7 @@
 
 
 ## 1월 17일 수정사항 
-## getFirePowerAclNew 화면 출력 오류**<u>
+## <u>getFirePowerAclNew 화면 출력 오류**<u>
 
 *해당내용은 다른 개발자가 제작한 코드를 수정한 내용입니다
 
