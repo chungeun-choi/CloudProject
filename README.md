@@ -17,6 +17,7 @@ getAgpPortGroup 호출 형태
 
 	3. 정형화 된 데이터를 포탈 백엔드 API 호출에 맞춰 전달
 
+	<img width="613" alt="스크린샷 2022-01-18 오후 2 50 37" src="https://user-images.githubusercontent.com/65060314/149878973-526c29f4-c705-4780-b946-f557e7e58f51.png">
 
 
 수정내용 :
