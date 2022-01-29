@@ -31,7 +31,7 @@ ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxx.xxx.xxx
 vlan :  xx(Prot-channel’x’)
 IP : xxx.xxx.xxx.xxx(ip address)
 
-요구사항에서 추가적으로 개발한 사항 : ‘vlan’ 는 ‘interface’로 변경 ‘mangement ‘,’’nameif ,’security-level’ key 값 추가(요청사항에 대해 재회의 했을 때 ) 
+요구사항에서 추가적으로 개발한 사항 : ‘vlan’ 는 ‘interface’로 변경 ‘mangement ‘,’’nameif ,’security-level’ key 값 추가(요청사항에 대해 재회의 했을 때 요청) 
 
 
 로직 형태
