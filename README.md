@@ -13,22 +13,26 @@
 
 정형화 되기 전 데이터
 
-interface Ethernet1/x
- management-only
- nameif mgmt
- security-level 0
- ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxxx.xxxx.xxx
-!
-interface Port-channel1.xx
- nameif 900000-VN1-OUTBOUND
- security-level 50
- ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxx.xxx.xxx
-!
+interface Ethernet1/x   
+management-only  
+nameif mgmt   
+security-level 0   
+ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxxx.xxxx.xxx   
+!   
+interface Port-channel1.xx   
+nameif 900000-VN1-OUTBOUND   
+security-level 50   
+ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxx.xxx.xxx   
+!   
+
+
+
 요구사항 형태
 vlan :  xx(Prot-channel’x’)
 IP : xxx.xxx.xxx.xxx(ip address)
 
-요구사항에서 추가적으로 개발한 사항 : ‘vlan’ 는 ‘interface’로 변경 ‘mangement ‘,’’nameif ,’security-level’ key 값 추가 
+요구사항에서 추가적으로 개발한 사항 : ‘vlan’ 는 ‘interface’로 변경 ‘mangement ‘,’’nameif ,’security-level’ key 값 추가   
+(요청사항에 대해 재회의 했을 때 요청) 
 
 
 로직 형태
@@ -41,7 +45,7 @@ IP : xxx.xxx.xxx.xxx(ip address)
 
 	4. 반복을 통해 리턴 값 추가
 
-
+*연휴를 활용해서 자동적으로 key ,value 형태로 구현할 수 있는 로직이 있는지 확인해보고 없다면 한번 만들어 보는것도....
 
 ## 1월 27일
 ## 추가 UCSD 개발 (ohter.setStaticIPpool.js)
