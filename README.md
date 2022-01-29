@@ -13,17 +13,17 @@
 
 정형화 되기 전 데이터
 
-interface Ethernet1/x
-management-only
-nameif mgmt
-security-level 0
-ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxxx.xxxx.xxx
-!
-interface Port-channel1.xx
-nameif 900000-VN1-OUTBOUND
-security-level 50
-ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxx.xxx.xxx
-!
+interface Ethernet1/x   
+management-only  
+nameif mgmt   
+security-level 0   
+ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxxx.xxxx.xxx   
+!   
+interface Port-channel1.xx   
+nameif 900000-VN1-OUTBOUND   
+security-level 50   
+ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxx.xxx.xxx   
+!   
 
 
 
