@@ -1,5 +1,3 @@
-//importPackage(java.lang);
-//importPackage(java.util);
 
 
 var returnd = []
@@ -11,17 +9,17 @@ var returnD = {
 
 };
 
-d = "interface Ethernet1/5\nmanagement-only\nnameif mgmt\nsecurity-level 0\nip address 10.231.11.35 255.255.255.0 standby 10.231.11.36\n!\ninterface Port-channel1.32\nnameif 900000-VN1-OUTBOUND\nsecurity-level 50\nip address 10.241.114.169 255.255.255.248 standby 10.241.114.170\n!\ninterface Port-channel1.532\nnameif 900000-VN2-OUTBOUND\nsecurity-level 50\nip address 10.241.127.169 255.255.255.248 standby 10.241.127.170\n!\ninterface Port-channel2.2032\nnameif 900000-INBOUND\nsecurity-level 0\nip address 10.241.140.172 255.255.255.248 standby 10.241.140.173"
+
 
 var inputd = d.split("!");
 
-//interface정규식 ex)interface Ethernet1/5,interface Port-channel1.32
+//interface정규식 ex)interface Ethernet1/5,interface Port-channel1.xx
 var portPatern = /interface ((\w)+[\/,\-](\w)+\.?(\w+)?)/;
-//nameif 정규식 ex)nameif mgmt, nameif 900000-VN1-OUTBOUND
+//nameif 정규식 ex)nameif mgmt, nameif xxxxx-xx-OUTBOUND
 var nameifPatern = /nameif (\w+)[\-]?(\w+)[\-]?(\w+)/;
-//securityLevel 정규식 ex)security-level 0, security-level 50
+//securityLevel 정규식 ex)security-level 0, security-level xx
 var securityLevelPatern = /security-level\s(\w+)/;
-//Ip Address 정규식 ex)ip address 10.231.11.35, ip address 10.241.114.169
+//Ip Address 정규식 ex)ip address xxx.xxx.xxx.xxx, ip address xxx.xxx.xxx.xxx
 var ipAddressPatern = /ip address (\w+.\w+.\w+.\w+)/
 
 
