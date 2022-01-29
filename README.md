@@ -1,4 +1,48 @@
 해당 레파지토리의 내용은 L-CLOUD 작업에서 제가 변경 및 수정 참여한 내용에 대해 기록을 남기기 위해 작성된 저장소입니다 👍👍👍
+
+
+
+## 1월 29일
+## 추가 UCSD 개발 (ohter.lncFpPaterning.js)
+추가 개발 항목….
+
+
+계속해서 비정형 데이터를 json 타입으로 정형화하는 작업을 진행 중이다.  Security 부분의 데이터를 가져오게 될때 특히 더 비정형 데이터를 추출하게 되는데 오늘은 interface 정보에 대한 값을 정형화 하는 작업을 진행 하였다
+해당 개발은 UCSD task를 통해 되었으며 개발환경은 jascript 와 유사한 cloupiaScript를 통해 개발 되었다 (cloupiaScript)는 Cisco가 자체 개발한 cloud 환경 개발을 위한 언어이다)
+장비에서 조회하는 명령어는 해당 context로 이동 후 ‘show interface’ 를 사용하게된다 데이터의 리턴 형태는 아래와 같다
+
+정형화 되기 전 데이터
+
+interface Ethernet1/x
+ management-only
+ nameif mgmt
+ security-level 0
+ ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxxx.xxxx.xxx
+!
+interface Port-channel1.xx
+ nameif 900000-VN1-OUTBOUND
+ security-level 50
+ ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxx.xxx.xxx
+!
+요구사항 형태
+vlan :  xx(Prot-channel’x’)
+IP : xxx.xxx.xxx.xxx(ip address)
+
+요구사항에서 추가적으로 개발한 사항 : ‘vlan’ 는 ‘interface’로 변경 ‘mangement ‘,’’nameif ,’security-level’ key 값 추가 
+
+
+로직 형태
+	
+	1. 전달 받은 비정형 데이터에서 정규식을 통해 데이터 파싱
+
+	2. 미리 정의 해둔 key, value 형태의 변수의 해당 값 정의
+
+	3. 변수를 json 형태로 변환
+
+	4. 반복을 통해 리턴 값 추가
+
+
+
 ## 1월 27일
 ## 추가 UCSD 개발 (ohter.setStaticIPpool.js)
 추가 개발 항목….
