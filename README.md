@@ -24,6 +24,9 @@ interface Port-channel1.xx
  security-level 50
  ip address xxx.xxx.xxx.xxx 255.255.255.0 standby xxx.xxx.xxx.xxx
 !
+
+
+
 요구사항 형태
 vlan :  xx(Prot-channel’x’)
 IP : xxx.xxx.xxx.xxx(ip address)
