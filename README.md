@@ -44,7 +44,7 @@ IP : xxx.xxx.xxx.xxx(ip address)
 
 	4. 반복을 통해 리턴 값 추가
 
-
+*연휴를 활용해서 자동적으로 key ,value 형태로 구현할 수 있는 로직이 있는지 확인해보고 없다면 한번 만들어 보는것도....
 
 ## 1월 27일
 ## 추가 UCSD 개발 (ohter.setStaticIPpool.js)
