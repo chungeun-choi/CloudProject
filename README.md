@@ -1,4 +1,21 @@
 해당 레파지토리의 내용은 L-CLOUD 작업에서 제가 변경 및 수정 참여한 내용에 대해 기록을 남기기 위해 작성된 저장소입니다 👍👍👍
+## 3월 14일
+## ElasticStack 구성을 위한 설치 스크립트 - Docker용 (ElasticStack.elasticDockerInstall.sh)
+
+추가 개발 항목 Elastic Search 설치 스크립트 (docker용)
+
+통합 검색 개발 구현으로 인해 docker container에 elastic search를 올리게 되었음. 일일히 테스트 때 마다 설치하고 설정하는게 번거로워 설치 스크립트를 제작하였음,
+config나 내부 ip 설정은 보안상 따로 설정하게 끔 지정이 되어있음 해당 설치 스크립트는 연습용으로 ElasticSearch를 실습할 때 좋을 것이라고 판단되어 추후 팀원들과 공유해서 사용 예정임
+
+
+로직 형태
+1. Elastic 및 kibana 버전을 입력 받음 -> docker pull 명령어를 통해 관련 버전에 대한 이미지를 내려받음
+2. ElasticSearch 와 Kibana에서 사용하게 될 Docker Network 이름을 입력 받음
+3. 생성 될 두개의 Container의 이름을 입력받음
+4. 생성완료
+
+****해당 로직 진행 중 실패 시 롤백을 진행하게끔 구성하였습니다
+****설치를 위한 조건 : docker 가 설치되어 있어야함,이미지를 내려받기 위해 internet 연결이 필수적으로 필요함
 
 ## 2월 16일
 ## 추가 UCSD 개발 (ohter.validateSubnet.js)
