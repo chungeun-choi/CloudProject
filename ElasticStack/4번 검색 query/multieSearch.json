@@ -1,0 +1,6 @@
+{"index":"검색할 인덱스"}
+{"_source":["keyword","subkeyword","text"],"query":{"bool":{"filter":[{"match":{"categoryNumber":"0"}}],"must":[{"multi_match":{"query":"검색할 단어","fields":["keyword^4","keyword.eng^4","text","text.eng","subkeyword^2"]}}]}}}
+{"index":"검색할 인덱스"}
+{"_source":["keyword","subkeyword","url"],"query":{"bool":{"filter":[{"match":{"categoryNumber":"1"}}],"must":[{"multi_match":{"query":"검색할 단어","fields":["keyword^4","keyword.eng^4","text","text.eng","subkeyword^2"]}}]}}}
+{"index":"검색할 인덱스"}
+{"_source":["keyword","subkeyword","url"],"query":{"bool":{"filter":[{"match":{"categoryNumber":"2"}}],"must":[{"multi_match":{"query":"검색할 단어","fields":["keyword^4","keyword.eng^4","text","text.eng","subkeyword^2"]}}]}}}

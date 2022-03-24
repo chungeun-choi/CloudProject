@@ -1,0 +1,18 @@
+{
+	"_source": ["keyword", "subkeyword", "url"],
+	"query": {
+		"bool": {
+			"filter": [{
+				"match": {
+					"categoryNumber": "2"
+				}
+			}],
+			"must": [{
+				"multi_match": {
+					"query": "검색할 키워드",
+					"fields": ["keyword^4", "keyword.eng^4", "text", "text.eng", "subkeyword^2"]
+				}
+			}]
+		}
+	}
+}

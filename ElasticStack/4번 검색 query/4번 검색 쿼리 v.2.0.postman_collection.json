@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "34116dc4-52d5-4ebe-bffa-9b7592c7c12e",
+		"name": "4번 검색 쿼리 v.2.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "4.검색 관련",
+			"item": [
+				{
+					"name": "\b인덱스 조회",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ESsource}}/{{indexName}}",
+							"host": [
+								"{{ESsource}}"
+							],
+							"path": [
+								"{{indexName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "용어집에서 검색",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_source\": [\"keyword\", \"subkeyword\", \"text\"],\n  \"query\": {\n    \"bool\": {\n      \"must\": [\n        {\n          \"multi_match\": {\n            \"query\": \"{{test_keyword}}\",\n            \"fields\": [\"keyword^4\", \"text\", \"subkeyword^2\"],\n            \"operator\": \"and\"\n          }\n        }\n      ],\n      \"filter\": {\n        \"term\": {\n          \"categoryNumber\": \"0\"\n        }\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ESsource}}/{{indexName}}/_search",
+							"host": [
+								"{{ESsource}}"
+							],
+							"path": [
+								"{{indexName}}",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "메뉴얼에서 검색",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_source\": [\"keyword\", \"subkeyword\", \"text\"],\n  \"query\": {\n    \"bool\": {\n      \"must\": [\n        {\n          \"multi_match\": {\n            \"query\": \"{{test_keyword}}\",\n            \"fields\": [\"keyword^4\", \"text\", \"subkeyword^2\"]\n          }\n        }\n      ],\n      \"filter\": {\n        \"term\": {\n          \"categoryNumber\": \"1\"\n        }\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ESsource}}/{{indexName}}/_search",
+							"host": [
+								"{{ESsource}}"
+							],
+							"path": [
+								"{{indexName}}",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "소개글에서 검색",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_source\": [\"keyword\", \"subkeyword\", \"text\",\"url\"],\n  \"query\": {\n    \"bool\": {\n      \"must\": [\n        {\n          \"multi_match\": {\n            \"query\": \"{{test_keyword}}\",\n            \"fields\": [\"keyword^4\", \"text\", \"subkeyword^2\"],\n            \"operator\": \"and\"\n          }\n        }\n      ],\n      \"filter\": {\n        \"term\": {\n          \"categoryNumber\": \"2\"\n        }\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ESsource}}/{{indexName}}/_search",
+							"host": [
+								"{{ESsource}}"
+							],
+							"path": [
+								"{{indexName}}",
+								"_search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Multi Query를 활용한 검색(*내부 json 파일 \"index\"키 값 변경 필요!!!)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"index\":\"{{indexName}}\"}\n{\"_source\":[\"keyword\",\"subkeyword\",\"text\"],\"query\":{\"bool\":{\"filter\":[{\"match\":{\"categoryNumber\":\"0\"}}],\"must\":[{\"multi_match\":{\"query\":\"{{test_keyword}}\",\"fields\":[\"keyword^4\",\"text\",\"subkeyword^2\"],\"operator\": \"and\"}}]}}}\n{\"index\":\"{{indexName}}\"}\n{\"_source\":[\"keyword\",\"subkeyword\",\"url\"],\"query\":{\"bool\":{\"filter\":[{\"match\":{\"categoryNumber\":\"1\"}}],\"must\":[{\"multi_match\":{\"query\":\"{{test_keyword}}\",\"fields\":[\"keyword^4\",\"text\",\"subkeyword^2\"],\"operator\": \"and\"}}]}}}\n{\"index\":\"{{indexName}}\"}\n{\"_source\":[\"keyword\",\"subkeyword\",\"url\"],\"query\":{\"bool\":{\"filter\":[{\"match\":{\"categoryNumber\":\"2\"}}],\"must\":[{\"multi_match\":{\"query\":\"{{test_keyword}}\",\"fields\":[\"keyword^4\",\"text\",\"subkeyword^2\"],\"operator\": \"and\"}}]}}}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ESsource}}/_msearch",
+							"host": [
+								"{{ESsource}}"
+							],
+							"path": [
+								"_msearch"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

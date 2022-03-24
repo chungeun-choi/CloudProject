@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "8a2870a9-9dd6-4696-91cd-98b100e8c835",
+		"name": "2번 템플릿 생성 3,0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "2.템플릿 생성 관련",
+			"item": [
+				{
+					"name": "LDCC 통합 데이터 템플릿 3.0",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\"order\" : 1,\n    \"index_patterns\" : [\n      \"ldcc_n_data_*\"\n    ],\n\t\"settings\": {\n\t\t\"index\": {\n\t\t\t\"analysis\": {\n\t\t\t\t\"char_filter\": {\n\t\t\t\t\t\"divide_number_front\": {\n\t\t\t\t\t\t\"type\": \"pattern_replace\",\n\t\t\t\t\t\t\"pattern\": \"(?<=\\\\d)(?=\\\\D)\",\n\t\t\t\t\t\t\"replacement\": \" \"\n\t\t\t\t\t},\n\t\t\t\t\t\"divide_number_back\": {\n\t\t\t\t\t\t\"type\": \"pattern_replace\",\n\t\t\t\t\t\t\"pattern\": \"(?<=\\\\D)(?=\\\\d)\",\n\t\t\t\t\t\t\"replacement\": \" \"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"filter\": {\n\t\t\t\t\t\"nori_posfilter\": {\n\t\t\t\t\t\t\"type\": \"nori_part_of_speech\",\n\t\t\t\t\t\t\"stoptags\": [\n\t\t\t\t\t\t\t\"NR\",\n\t\t\t\t\t\t\t\"E\",\n\t\t\t\t\t\t\t\"J\",\n\t\t\t\t\t\t\t\"UNKNOWN\",\n\t\t\t\t\t\t\t\"SL\"\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\t\"num_filter\": {\n\t\t\t\t\t\t\"type\": \"keep_types\",\n\t\t\t\t\t\t\"types\": [\"<NUM>\"],\n\t\t\t\t\t\t\"mode\": \"exclude\"\n\t\t\t\t\t},\n\t\t\t\t\t\"koreaa_filter\": {\n\t\t\t\t\t\t\"type\": \"keep_types\",\n\t\t\t\t\t\t\"types\": [\"<HANGUL>\"],\n\t\t\t\t\t\t\"mode\": \"exclude\"\n\t\t\t\t\t},\n\t\t\t\t\t\"english_filter\": {\n\t\t\t\t\t\t\"type\": \"keep_types\",\n\t\t\t\t\t\t\"types\": [\"<ALPHANUM>\"],\n\t\t\t\t\t\t\"mode\": \"exclude\"\n\t\t\t\t\t},\n\t\t\t\t\t\"english_stop\": {\n\t\t\t\t\t\t\"type\": \"stop\",\n\t\t\t\t\t\t\"stopwords\": \"_english_\"\n\t\t\t\t\t},\n\t\t\t\t\t\"english_keywords\": {\n\t\t\t\t\t\t\"type\": \"keyword_marker\",\n\t\t\t\t\t\t\"keywords\": [\"example\"]\n\t\t\t\t\t},\n\t\t\t\t\t\"english_stemmer\": {\n\t\t\t\t\t\t\"type\": \"stemmer\",\n\t\t\t\t\t\t\"language\": \"english\"\n\t\t\t\t\t},\n\t\t\t\t\t\"english_possessive_stemmer\": {\n\t\t\t\t\t\t\"type\": \"stemmer\",\n\t\t\t\t\t\t\"language\": \"possessive_english\"\n\t\t\t\t\t},\n\t\t\t\t\t\"edge_ngram_filter_front\": {\n\t\t\t\t\t\t\"type\": \"edgeNGram\",\n\t\t\t\t\t\t\"side\": \"front\",\n\t\t\t\t\t\t\"min_gram\": \"1\",\n\t\t\t\t\t\t\"max_gram\": \"10\"\n\t\t\t\t\t},\n\t\t\t\t\t\"edge_ngram_eng_front\": {\n\t\t\t\t\t\t\"type\": \"edgeNGram\",\n\t\t\t\t\t\t\"side\": \"front\",\n\t\t\t\t\t\t\"min_gram\": \"4\",\n\t\t\t\t\t\t\"max_gram\": \"4\"\n\t\t\t\t\t},\n\t\t\t\t\t\"edge_ngram_filter_2\":{\n\t\t\t\t\t  \"type\": \"edgeNGram\",\n\t\t\t\t\t\t\"side\": \"front\",\n\t\t\t\t\t\t\"min_gram\": \"2\",\n\t\t\t\t\t\t\"max_gram\": \"10\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"analyzer\": {\n\t\t\t\t\t\"nori\": {\n\t\t\t\t\t  \"char_filter\": [\"divide_number_front\",\"divide_number_back\"],\n\t\t\t\t\t\t\"filter\": [\n\t\t\t\t\t\t\t\"nori_posfilter\",\n\t\t\t\t\t\t\t\"lowercase\",\n\t\t\t\t\t\t\t\"num_filter\",\n\t\t\t\t\t\t\t\"nori_readingform\",\n\t\t\t\t\t\t\t\"english_filter\",\n\t\t\t\t\t\t\t\"edge_ngram_filter_front\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"type\": \"custom\",\n\t\t\t\t\t\t\"tokenizer\": \"nori_mixed\"\n\t\t\t\t\t},\n\t\t\t\t\t\"search_nori\": {\n\t\t\t\t\t  \"char_filter\": [\"divide_number_front\",\"divide_number_back\"],\n\t\t\t\t\t\t\"filter\": [\n\t\t\t\t\t\t\t\"nori_posfilter\",\n\t\t\t\t\t\t\t\"lowercase\",\n\t\t\t\t\t\t\t\"num_filter\",\n\t\t\t\t\t\t\t\"nori_readingform\",\n\t\t\t\t\t\t\t\"english_filter\",\n\t\t\t\t\t\t\t\"edge_ngram_filter_2\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"type\": \"custom\",\n\t\t\t\t\t\t\"tokenizer\": \"standard\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"eng_analyzer\": {\n\t\t\t\t\t\t  \"char_filter\": [\"divide_number_front\",\"divide_number_back\"],\n\t\t\t\t\t\t\t\"filter\": [\n\t\t\t\t\t\t\t\t\"lowercase\",\n\t\t\t\t\t\t\t\t\"english_keywords\",\n\t\t\t\t\t\t\t\t\"english_stop\",\n\t\t\t\t\t\t\t\t\"snowball\",\n\t\t\t\t\t\t\t\t\"koreaa_filter\",\n\t\t\t\t\t\t\t\t\"num_filter\",\n\t\t\t\t\t\t\t\t\"edge_ngram_eng_front\"\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"type\": \"custom\",\n\t\t\t\t\t\t\t\"tokenizer\": \"standard\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"search_eng\": {\n\t\t\t\t\t\t  \"char_filter\": [\"divide_number_front\",\"divide_number_back\"],\n\t\t\t\t\t\t\t\"filter\": [\n\t\t\t\t\t\t\t\t\"lowercase\",\n\t\t\t\t\t\t\t\t\"english_keywords\",\n\t\t\t\t\t\t\t\t\"english_stop\",\n\t\t\t\t\t\t\t\t\"snowball\",\n\t\t\t\t\t\t\t\t\"koreaa_filter\",\n\t\t\t\t\t\t\t\t\"num_filter\",\n\t\t\t\t\t\t\t\t\"edge_ngram_eng_front\"\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"type\": \"custom\",\n\t\t\t\t\t\t\t\"tokenizer\": \"standard\"\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"tokenizer\": {\n\t\t\t\t\t\t\"nori_mixed\": {\n\t\t\t\t\t\t\t\"type\": \"nori_tokenizer\",\n\t\t\t\t\t\t\t\"decompound_mode\": \"discard\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"mappings\": {\n\t\t\t\"properties\": {\n\t\t\t\t\"categoryNumber\": {\n\t\t\t\t\t\"type\": \"float\"\n\t\t\t\t},\n\t\t\t\t\"subkeyword\": {\n\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\"fields\": {\n\t\t\t\t\t\t\"keyword\": {\n\t\t\t\t\t\t\t\"type\": \"keyword\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"text\": {\n\t\t\t\t  \"search_analyzer\": \"search_nori\", \n\t\t\t\t\t\"analyzer\": \"nori\",\n\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\"fields\": {\n\t\t\t\t\t\t\"eng\": {\n\t\t\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\t\t\"analyzer\": \"eng_analyzer\",\n\t\t\t\t\t\t\t\"search_analyzer\": \"search_eng\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"keyword\": {\n\t\t\t\t  \"search_analyzer\": \"search_nori\", \n\t\t\t\t\t\"analyzer\": \"nori\",\n\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\"fields\": {\n\t\t\t\t\t\t\"keyword\": {\n\t\t\t\t\t\t\t\"type\": \"keyword\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"eng\": {\n\t\t\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\t\t\"analyzer\": \"eng_analyzer\",\n\t\t\t\t\t\t\t\"search_analyzer\": \"search_eng\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"url\": {\n\t\t\t\t\t\"type\": \"keyword\"\n\t\t\t\t}\n\t\t\t}\n\t},\n    \"aliases\" : { }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ESsource}}/_template/{{templateName}}",
+							"host": [
+								"{{ESsource}}"
+							],
+							"path": [
+								"_template",
+								"{{templateName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "생성 템플릿 조회",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ESsource}}/_template/{{templateName}}",
+							"host": [
+								"{{ESsource}}"
+							],
+							"path": [
+								"_template",
+								"{{templateName}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
