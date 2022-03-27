@@ -8,7 +8,7 @@ Elastic Search, kibana  설치 가이드
 	해당 스크립트는 Bash shell 기준으로 작성 되었음
 
 | 1) Docker container에 사용하게 될 Elastic Search, Kibana 의 이미지 version을 입력 |
-|---------|
+|:---------:|
 | <img width="417" alt="image" src="https://user-images.githubusercontent.com/65060314/159914307-2cbb4694-0f06-4566-82f7-6c9af01cf8ba.png"> |
 |2) 각각의 Docker container 끼리의 통신을 위한 Docker Network 이름을 입력|
 |<img width="417" alt="image" src="https://user-images.githubusercontent.com/65060314/160268657-c23dc2bc-7308-4b9e-aacc-0f6d4df381a1.png">|
@@ -25,7 +25,7 @@ Elastic Search, kibana  설치 가이드
 *포스트맨 파일은 Global 변수 관련 설정 후 사용
 
 |1)	전달 된 템플릿 Json 내용을 Kiabana Web을 통해 생성 (내부 template 내용은 포스트맨 파일 내용에서 사용)|
-|----------|
+|:----------:|
 |	Kibana web 주소는 {{host IP}}:{{지정포트(Defalut는5601 )}}
  <img width="397" alt="image" src="https://user-images.githubusercontent.com/65060314/160268849-d4dade13-8fe8-4557-9c6e-d5e968a82aab.png">|
 |2) 포스트맨을 통한 템플릿 생성|
@@ -38,13 +38,13 @@ Elastic Search, kibana  설치 가이드
 ## 3.	Kibana Web을 활용한 데이터 Import – ‘3번 import할 CSV 파일’ 폴더 참고
 
 |1)	Kibana 웹페이지 왼쪽하단의 ‘더보기’ 버튼 클릭|
-|-------|
+|:-------:|
 |<img width="398" alt="image" src="https://user-images.githubusercontent.com/65060314/160268967-451765e3-12ea-4b0b-a311-18b818726740.png">|
 |2)	데이터 import 페이지 이동|
-|<img width="398" alt="image" src="https://user-images.githubusercontent.com/65060314/160269020-d6ac435f-9e74-4985-afe9-16a00d355468.png">
-1.	왼쪽 메뉴바에서 ‘Machine Learning’ 클릭
-2.	상단 메뉴바에서 ‘Data Visualizer’ 클릭
-3.	 ‘Import data’에서 ‘Upload File’ 클릭 
+|<img width="398" alt="image" src="https://user-images.githubusercontent.com/65060314/160269020-d6ac435f-9e74-4985-afe9-16a00d355468.png"><\br>
+1.	왼쪽 메뉴바에서 ‘Machine Learning’ 클릭 <\br>
+2.	상단 메뉴바에서 ‘Data Visualizer’ 클릭 <\br>
+3.	 ‘Import data’에서 ‘Upload File’ 클릭 <\br>
 |
 |3)	CSV 파일을 선택한 뒤 하단의 ‘import’ 버튼 클릭 |
 |<img width="391" alt="image" src="https://user-images.githubusercontent.com/65060314/160269036-3ab4c25a-24c3-47cc-abf6-68b526d81631.png">|
