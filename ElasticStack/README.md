@@ -26,8 +26,7 @@ Elastic Search, kibana  설치 가이드
 
 |1)	전달 된 템플릿 Json 내용을 Kiabana Web을 통해 생성 (내부 template 내용은 포스트맨 파일 내용에서 사용)|
 |:----------:|
-|	Kibana web 주소는 {{host IP}}:{{지정포트(Defalut는5601 )}}
- <img width="600" alt="image" src="https://user-images.githubusercontent.com/65060314/160268849-d4dade13-8fe8-4557-9c6e-d5e968a82aab.png">|
+|	Kibana web 주소는 {{host IP}}:{{지정포트(Defalut는5601 )}} </br> <img width="600" alt="image" src="https://user-images.githubusercontent.com/65060314/160268849-d4dade13-8fe8-4557-9c6e-d5e968a82aab.png">|
 |2) 포스트맨을 통한 템플릿 생성|
 |<img width="600" alt="image" src="https://user-images.githubusercontent.com/65060314/160268930-58dee24f-c5da-4999-a3b7-0e45eb14dda0.png">|
 
@@ -41,25 +40,24 @@ Elastic Search, kibana  설치 가이드
 |:-------:|
 |<img width="600" alt="image" src="https://user-images.githubusercontent.com/65060314/160268967-451765e3-12ea-4b0b-a311-18b818726740.png">|
 |2)	데이터 import 페이지 이동|
-|<img width="600" alt="image" src="https://user-images.githubusercontent.com/65060314/160269020-d6ac435f-9e74-4985-afe9-16a00d355468.png"> </br>1.	왼쪽 메뉴바에서 ‘Machine Learning’ 클릭 </br>2.	상단 메뉴바에서 ‘Data Visualizer’ 클릭 </br>3. ‘Import data’에서 ‘Upload File’ 클릭 </br>3)	CSV 파일을 선택한 뒤 하단의 ‘import’ 버튼 클릭| 
+|<img width="600" alt="image" src="https://user-images.githubusercontent.com/65060314/160269020-d6ac435f-9e74-4985-afe9-16a00d355468.png"> </br>1.	왼쪽 메뉴바에서 ‘Machine Learning’ 클릭 </br>2.	상단 메뉴바에서 ‘Data Visualizer’ 클릭 </br>3. ‘Import data’에서 ‘Upload File’ 클릭 </br>|
+|3)	CSV 파일을 선택한 뒤 하단의 ‘import’ 버튼 클릭| 
 |<img width="600" alt="image" src="https://user-images.githubusercontent.com/65060314/160269036-3ab4c25a-24c3-47cc-abf6-68b526d81631.png">|
-|4)	저장되는 ‘Index name’을 템플릿의 ‘index_pattern’으로 등록한 이름으로 등록| 
-|	해당 이름 형태로 저장하는 이유 : template 형태의 인덱스로 저장하기 위해|
-|<img width="600" alt="image" src="https://user-images.githubusercontent.com/65060314/160269063-45993dcd-bc4a-44b4-a419-e4585a9e8712.png">|
+|4)	저장되는 ‘Index name’을 템플릿의 ‘index_pattern’으로 등록한 이름으로 등록 | 
+| 해당 이름 형태로 저장하는 이유 : template 형태의 인덱스로 저장하기 위해 </br> <img width="600" alt="image" src="https://user-images.githubusercontent.com/65060314/160269063-45993dcd-bc4a-44b4-a419-e4585a9e8712.png">|
 
 ## 4.	검색 –‘4번 검색’ 폴더 참고
 
 *포스트맨 파일은 환경변수 관련 설정 후 사용
-Json 형태로 된 Query를 통해 검색 가능
-	‘.postman_collection.json’ 파일은 포스트맨에서 사용가능
-	‘.json’ 파일에는 search 데이터 내용 존재
-단일 검색 Query 
+Json 형태로 된 Query를 통해 검색 가능 </br>
+	‘.postman_collection.json’ 파일은 포스트맨에서 사용가능 </br>
+	‘.json’ 파일에는 search 데이터 내용 존재 </br>
 
-	포트스맨 파일에서 해당 내용은 단일 검색 Query
-
- 
-Multi Query를 활용한 검색
-	Multi Query를 활용한 검색 시 내부 json 데이터에서 “index”의 value 값 변경 필요!! 
+|단일 검색 Query| 
+|----------|
+|	포트스맨 파일에서 해당 내용은 단일 검색 Query </br> <img width="600" alt="image" src="https://user-images.githubusercontent.com/65060314/160270477-52ca65a7-6647-4238-8933-16bc3d667e57.png">|
+|Multi Query를 활용한 검색|
+|	Multi Query를 활용한 검색 시 내부 json 데이터에서 “index”의 value 값 변경 필요!! </br> <img width="600" alt="image" src="https://user-images.githubusercontent.com/65060314/160270527-94bc0745-cc57-4c61-8a33-45b6e631d61a.png"> |
  
 
 
