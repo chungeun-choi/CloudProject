@@ -28,7 +28,6 @@ Elastic Search, kibana  설치 가이드
 |----------|
 |	Kibana web 주소는 {{host IP}}:{{지정포트(Defalut는5601 )}}
  <img width="397" alt="image" src="https://user-images.githubusercontent.com/65060314/160268849-d4dade13-8fe8-4557-9c6e-d5e968a82aab.png">|
-
 |2) 포스트맨을 통한 템플릿 생성|
 |<img width="397" alt="image" src="https://user-images.githubusercontent.com/65060314/160268887-95b351ac-c4d1-4f2d-889d-abead8988a48.png"|
 
