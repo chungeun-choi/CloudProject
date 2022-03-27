@@ -8,24 +8,16 @@ Elastic Search, kibana  설치 가이드
 	해당 스크립트는 Bash shell 기준으로 작성 되었음
 
 | 1) Docker container에 사용하게 될 Elastic Search, Kibana 의 이미지 version을 입력 |
-|---------------|
+|---------|
 | <img width="417" alt="image" src="https://user-images.githubusercontent.com/65060314/159914307-2cbb4694-0f06-4566-82f7-6c9af01cf8ba.png"> |
-
- 
-2) 각각의 Docker container 끼리의 통신을 위한 Docker Network 이름을 입력
-
- 
-
-3) ‘Elastic Search 용 container Name’ 과 ‘Kibana container Name’ 을 입력
-
- 
-
-4) 애널라이저 설치 – 필요시 설치, Y 또는 N 으로 응답
-
- 
-
+|2) 각각의 Docker container 끼리의 통신을 위한 Docker Network 이름을 입력|
+|<img width="417" alt="image" src="https://user-images.githubusercontent.com/65060314/160268657-c23dc2bc-7308-4b9e-aacc-0f6d4df381a1.png">|
+|3) ‘Elastic Search 용 container Name’ 과 ‘Kibana container Name’ 을 입력|
+|<img width="416" alt="image" src="https://user-images.githubusercontent.com/65060314/160268701-34ac015b-f463-4503-8703-a24c60f2f95b.png">|
+|4) 애널라이저 설치 – 필요시 설치, Y 또는 N 으로 응답|
+|<img width="415" alt="image" src="https://user-images.githubusercontent.com/65060314/160268718-df08f59f-865a-465b-b692-1ce0effb1c3a.png">
 *설치 도중 해당 내용으로 에러 발생 시 내부 방화벽 장비에서 설정이 되어있는지 확인필요
- 
+<img width="417" alt="image" src="https://user-images.githubusercontent.com/65060314/160268741-6490fed1-956a-416f-8a47-69fd5b6cdd6d.png">|
 
 
 ## 2.	데이터 인덱싱을 위한 인덱스 템플릿 생성 – ‘2번 템플릿 생성’ 폴더 확인
