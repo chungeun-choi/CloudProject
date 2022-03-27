@@ -25,6 +25,7 @@ Elastic Search, kibana  설치 가이드
 *포스트맨 파일은 Global 변수 관련 설정 후 사용
 
 |1)	전달 된 템플릿 Json 내용을 Kiabana Web을 통해 생성 (내부 template 내용은 포스트맨 파일 내용에서 사용)|
+|----------|
 |	Kibana web 주소는 {{host IP}}:{{지정포트(Defalut는5601 )}}
  <img width="397" alt="image" src="https://user-images.githubusercontent.com/65060314/160268849-d4dade13-8fe8-4557-9c6e-d5e968a82aab.png">|
 
