@@ -45,6 +45,7 @@ Elastic Search, kibana  설치 가이드
 1.	왼쪽 메뉴바에서 ‘Machine Learning’ 클릭
 2.	상단 메뉴바에서 ‘Data Visualizer’ 클릭
 3.	 ‘Import data’에서 ‘Upload File’ 클릭 |
+|----------------------------|
 |3)	CSV 파일을 선택한 뒤 하단의 ‘import’ 버튼 클릭 |
 |<img width="391" alt="image" src="https://user-images.githubusercontent.com/65060314/160269036-3ab4c25a-24c3-47cc-abf6-68b526d81631.png">|
 |4)	저장되는 ‘Index name’을 템플릿의 ‘index_pattern’으로 등록한 이름으로 등록| 
