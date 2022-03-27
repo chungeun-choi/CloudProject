@@ -7,8 +7,9 @@ Elastic Search, kibana  설치 가이드
 
 	해당 스크립트는 Bash shell 기준으로 작성 되었음
 
-1) Docker container에 사용하게 될 Elastic Search, Kibana 의 이미지 version을 입력
- <img width="417" alt="image" src="https://user-images.githubusercontent.com/65060314/159914307-2cbb4694-0f06-4566-82f7-6c9af01cf8ba.png">
+| 1) Docker container에 사용하게 될 Elastic Search, Kibana 의 이미지 version을 입력 |
+
+| <img width="417" alt="image" src="https://user-images.githubusercontent.com/65060314/159914307-2cbb4694-0f06-4566-82f7-6c9af01cf8ba.png"> |
 
  
 2) 각각의 Docker container 끼리의 통신을 위한 Docker Network 이름을 입력
