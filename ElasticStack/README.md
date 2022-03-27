@@ -1,14 +1,14 @@
 Elastic Search, kibana  설치 가이드
 
 
-1.	설치 스크립트 실행 – ‘1번 설치항목’폴더 확인
+## 1.	설치 스크립트 실행 – ‘1번 설치항목’폴더 확인
 
 	 스크립트를 실행하기에 앞서 ‘Docker’ 프로그램이 설치 및 실행되고 있어야 함, Elastic Search에서 사용하게 될 포트가 open 되어 있어야함
 
 	해당 스크립트는 Bash shell 기준으로 작성 되었음
 
 1) Docker container에 사용하게 될 Elastic Search, Kibana 의 이미지 version을 입력
-  <img width="417" alt="image" src="https://user-images.githubusercontent.com/65060314/159914307-2cbb4694-0f06-4566-82f7-6c9af01cf8ba.png">
+ <img width="417" alt="image" src="https://user-images.githubusercontent.com/65060314/159914307-2cbb4694-0f06-4566-82f7-6c9af01cf8ba.png">
 
  
 2) 각각의 Docker container 끼리의 통신을 위한 Docker Network 이름을 입력
@@ -27,7 +27,7 @@ Elastic Search, kibana  설치 가이드
  
 
 
-2.	데이터 인덱싱을 위한 인덱스 템플릿 생성 – ‘2번 템플릿 생성’ 폴더 확인
+## 2.	데이터 인덱싱을 위한 인덱스 템플릿 생성 – ‘2번 템플릿 생성’ 폴더 확인
 
 *포스트맨 파일은 Global 변수 관련 설정 후 사용
 
@@ -42,7 +42,7 @@ Elastic Search, kibana  설치 가이드
 
 
  
-3.	Kibana Web을 활용한 데이터 Import – ‘3번 import할 CSV 파일’ 폴더 참고
+## 3.	Kibana Web을 활용한 데이터 Import – ‘3번 import할 CSV 파일’ 폴더 참고
 
 
 
@@ -67,7 +67,7 @@ Elastic Search, kibana  설치 가이드
  
 	해당 이름 형태로 저장하는 이유 : template 형태의 인덱스로 저장하기 위해
 
-4.	검색 –‘4번 검색’ 폴더 참고
+## 4.	검색 –‘4번 검색’ 폴더 참고
 
 *포스트맨 파일은 환경변수 관련 설정 후 사용
 Json 형태로 된 Query를 통해 검색 가능
