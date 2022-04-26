@@ -1,4 +1,8 @@
 해당 레파지토리의 내용은 L-CLOUD 작업에서 제가 변경 및 수정 참여한 내용에 대해 기록을 남기기 위해 작성된 저장소입니다 👍👍👍
+## 3월 24일
+## ElasticStack 구성을 위한 설치 스크립트 및 설치가이드 제작
+해당 내용은 통합검색 서비스를 제공하기 위해 docker container 위에서 설치할 수 있도록 제작된 '설치 Script',데이터 인덱싱시에 사용하게될 'index template', 검색 확인용 데이터 (Ncloud 용어집 데이터 활용),검색 시 사용하게 될 json 'query'로 구성 되어있습니다 설치 가이드 내용은 word 문서 파일을 통해 확인 할 수 있으며 README에도 해당 내용이 업데이트 
+
 ## 3월 14일
 ## ElasticStack 구성을 위한 설치 스크립트 - Docker용 (ElasticStack.elasticDockerInstall.sh)
 
